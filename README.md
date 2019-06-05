@@ -16,7 +16,7 @@ is assumed to exist in the k8s node objects.
 
 ## Usage
 
-Copy the `node-local` script to the /optcni/bin directory. Note that
+Copy the `node-local` script to the /opt/cni/bin directory. Note that
 `host-local` must also be installed here;
 
 ```
@@ -41,7 +41,7 @@ Configure your CNI-plugin to use ipam `node-local`. Example;
 }
 ```
 
-## Loacal testing
+## Local testing
 
 The `node-local` script can be tested off-line;
 
