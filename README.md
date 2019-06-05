@@ -54,4 +54,33 @@ HOSTNAME=vm-003 HOST_LOCAL=cat ./node-local < ./example-cni.conf
 ```
 
 This will print the "real" cni configuration that will be passed to
-`host-local`.
+`host-local`;
+
+```
+{
+  "cniVersion": "0.3.1",
+  "name": "xcluster",
+  "type": "bridge",
+  "bridge": "cbr0",
+  "isGateway": true,
+  "isDefaultGateway": true,
+  "ipam": {
+    "type": "host-local",
+    "ranges": [
+      [
+        {
+          "subnet": "11.0.2.0/24",
+          "gateway": "11.0.2.1"
+        }
+      ],
+      [
+        {
+          "subnet": "1100:200::/24",
+          "gateway": "1100:200::1"
+        }
+      ]
+    ]
+  }
+}
+```
+
